@@ -56,7 +56,7 @@ export default function BlogPage() {
     {
       id: 5,
       title: "Cybersecurity Best Practices for Businesses",
-      excerpt: "Protect your business with essential cybersecurity practices and strategies in today's digital landscape.",
+      excerpt: "Protect your business with essential cybersecurity practices and strategies in today&apos;s digital landscape.",
       author: "David Kim",
       date: "January 5, 2024",
       readTime: "9 min read",

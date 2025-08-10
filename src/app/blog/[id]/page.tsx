@@ -4,7 +4,7 @@ import { use, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, User, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);

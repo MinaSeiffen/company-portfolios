@@ -44,8 +44,8 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to start your next project? We'd love to hear from you.
-            Let's discuss how we can help bring your vision to life.
+            Ready to start your next project? We&apos;d love to hear from you.
+            Let&apos;s discuss how we can help bring your vision to life.
           </p>
         </div>
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   id="subject"
                   name="subject"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
               <div>
@@ -178,11 +178,11 @@ export default function ContactPage() {
         <div className="animate-on-scroll">
           <div className="bg-gray-50 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Let's Work Together
+              Let&apos;s Work Together
             </h2>
             <p className="text-gray-600 mb-6">
               Whether you have a specific project in mind or just want to explore possibilities,
-              we're here to help you succeed.
+              we&apos;re here to help you succeed.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300">
