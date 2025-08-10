@@ -1,19 +1,21 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { use, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock, User, Tag } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const postRef = useRef<HTMLDivElement>(null);
 
   // Sample blog post data - in a real app, this would come from an API or CMS
   const blogPost = {
-    id: params.id,
+    id,
     title: "The Future of Web Development in 2024",
     content: `
       <p class="mb-6 text-lg text-gray-700 leading-relaxed">
@@ -136,9 +138,11 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
                 {blogPost.readTime}
               </div>
             </div>
-            <img
+            <Image
               src={blogPost.image}
               alt={blogPost.title}
+              width={500}
+              height={300}
               className="w-full h-64 md:h-96 object-cover rounded-xl"
             />
           </header>
@@ -167,9 +171,11 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           <div className="mt-12 p-6 bg-gray-50 rounded-xl animate-on-scroll">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">About the Author</h3>
             <div className="flex items-center">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
                 alt={blogPost.author}
+                width={100}
+                height={100}
                 className="w-16 h-16 rounded-full mr-4"
               />
               <div>
@@ -191,9 +197,11 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
           <div className="grid md:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <img
+                <Image
                   src={`https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop`}
                   alt="Related post"
+                  width={500}
+                  height={300}
                   className="w-full h-32 object-cover"
                 />
                 <div className="p-4">

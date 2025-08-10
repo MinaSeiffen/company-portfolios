@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,9 +118,11 @@ export default function BlogPage() {
           {blogPosts.map((post, index) => (
             <article key={post.id} className="animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
-                <img
+                <Image
                   src={post.image}
                   alt={post.title}
+                  width={500}
+                  height={300}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
